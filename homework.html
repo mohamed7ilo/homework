@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+function nextEx(numberOfEx)
+
+
+{
+document.write('<br>')
+document.write('<br>')
+document.write(`_________________Exercise_${numberOfEx}_____________________`)
+document.write('<br>')
+document.write('<br>') 
+}
+
+nextEx(1)
+   //Ex1:
+//Write a for loop that prints the numbers from 12 to 24.
+for (let x = 12; x <= 24; x++) {
+  document.write(x+' ')
+}
+//ex2
+nextEx(2)
+
+for (let a = 7; a <= 31; a += 2) {
+    document.write(a+' ')
+
+}
+nextEx(3)
+
+//ex 3
+for (let b = 10; b >= -20; b -= 2) {
+    document.write(b+' ')
+}
+nextEx(4)
+
+//ex4
+
+for(let x=1; x<=45; x++){
+    document.write('<br>'+x )
+    if(x%5===0&&x%3===0){
+        document.write(' fizzbuzz')
+    }
+    else
+        if(x%3===0){
+            document.write(" fizz")
+
+    }
+        else
+            if(x%5===0){
+                document.write(" buzz")
+        
+    }
+   
+}
+nextEx(5)
+//ex 5
+
+
+function arrSum(sumArr){
+    let sum = 0
+    for(let x=0; x<sumArr.length;x++){
+        
+         sum = sum + sumArr[x]      
+    }
+    document.write(sum+' ')
+}
+var numbersArray = [1,13,22,123,49,34,5,24,57,45]
+arrSum(numbersArray)
+
+
+    </script>
+
+
+
+
+</body>
+</html>
