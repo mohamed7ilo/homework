@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let studentNum = parseInt(prompt('enter the student number in the calss : '))
+        var studentGrades = []
+        
+        while(studentNum>studentGrades.length){
+            let studentGrade = parseInt(prompt('enter the student grades: '))
+            studentGrades.push(Number(studentGrade))
+        }
+        let sum = 0
+        for(let index = 0 ; studentGrades.length>index;index++){
+
+            sum=sum+studentGrades[index]
+
+        }
+
+        let avrage = sum / studentGrades.length
+
+        console.log(avrage)
+        for(let x = 0 ;x<studentNum;x++){
+            let correntGrade = studentGrades[x]
+            if(correntGrade>avrage){
+                console.log(correntGrade)
+
+            }
+
+
+        }
+        let max=0
+        for(let c=0;c<studentNum;c++){
+            
+            let newEle = studentGrades[c]
+            if(max<newEle){
+                max=newEle
+            }
+            
+        }   
+        console.log(max)
+
+    </script>
+</body>
+</html>
