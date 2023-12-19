@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <script>
+
+// ex1
+const arrayFilledWith55 = Array(100).fill(55);
+console.log("Array with 100 elements, all filled with 55:", arrayFilledWith55)
+
+    // ex 2
+
+
+const arrayLength = parseInt(prompt("Enter the array length: "))
+
+const userNumber = parseInt(prompt("Enter a number : "))
+
+const newArray = Array(arrayLength).fill(userNumber)
+console.log(`Array with ${arrayLength} elements, all filled with ${userNumber}:`, newArray)
+// ex 3
+let grades = [85, 90, 78, 95, 88, 92, 70, 89, 82];
+
+let sum = 0;
+for (let i = 0; i < grades.length; i++) {
+    sum += grades[i];
+}
+
+let average = sum / grades.length;
+
+let aboveAverage = 0;
+let belowAverage = 0;
+
+for (let i = 0; i < grades.length; i++) {
+    if (grades[i] > average) {
+        aboveAverage++;
+    } else if (grades[i] < average) {
+        belowAverage++;
+    }
+}
+document.write("all grades sum " + sum + "<br>");
+document.write("The average is " + average + "<br>");
+document.write("grades above the average: " + aboveAverage + "<br>");
+document.write("grades below the average: " + belowAverage + "<br>");
+
+console.log("all grades sum " + sum);
+console.log("  The avrage is  " + average); 
+console.log("grades above the avrage: " + aboveAverage);
+console.log("grades below the avrage: " + belowAverage);
+
+document.write("all grades sum " + sum + "<br>");
+document.write("The average is " + average + "<br>");
+document.write("grades above the average: " + aboveAverage[i] + "<br>");
+document.write("grades below the average: " + belowAverage[i] + "<br>");
+// ex 4
+
+
+ </script>   
+</body>
+</html>
