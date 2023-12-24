@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Switch case</title>
+</head>
+
+<body>
+
+    <img id="my_card" src="" alt="my card" width="200" height="300" />
+    <hr />
+    <img id="comp_card" src="" alt="comp card" width="200" height="300" />
+    <script>
+
+        // get a number from the user
+        const my_card = parseInt(prompt("What's your card?"))
+
+        // get a number from the user
+        const comp_card = parseInt(prompt("What's the computer card?"))
+
+        switch (my_card) {
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+            case 7:
+            case 8:
+            case 9:
+            case 10: document.getElementById('my_card').src = 'images/' + my_card + '_of_hearts.png'
+                break;
+            case 11: document.getElementById('my_card').src = 'images/J_of_hearts.png'
+                break;
+            case 12: document.getElementById('my_card').src = 'images/Q_of_hearts.png'
+                break;
+            case 13: document.getElementById('my_card').src = 'images/K_of_hearts.png'
+                break;
+            case 14: document.getElementById('my_card').src = 'images/A_of_hearts.png'
+                break;
+            case 15: document.getElementById('my_card').src = 'images/JOKER.png'
+                break;
+        }
+        document.write('<br />')
+        switch (comp_card) {
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+            case 7:
+            case 8:
+            case 9:
+            case 10: document.getElementById('comp_card').src = 'images/' + my_card + '_of_spades.png'
+                break;
+            case 11: document.getElementById('comp_card').src = 'images/J_of_spades.png'
+                break;
+            case 12: document.getElementById('comp_card').src = 'images/Q_of_spades.png'
+                break;
+            case 13: document.getElementById('comp_card').src = 'images/K_of_spades.png'
+                break;
+            case 14: document.getElementById('comp_card').src = 'images/A_of_spades.png'
+                break;
+            case 15: document.getElementById('comp_card').src = 'images/JOKER.png'
+                break;
+        }
+    </script>
+</body>
+
+</html>

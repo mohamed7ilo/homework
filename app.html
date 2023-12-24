@@ -3,15 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="./mathGame.js"></script>
+    <title>Rock, Paper, Scissors and Numbers</title>
+    <style>
+        img {
+            width: 100px;
+            height: 150px;
+            margin: 10px;
+        }
+    </style>
 </head>
 <body>
-    <button onclick="presentQuestion()">start</button>
-    <div id="qustion" ></div>
-    
-    <input type="number" id="check">
-    <button onclick="check()">check</button>
-    <div id="massage"> </div>    
+
+<h1>Rock, Paper, Scissors (P VS C) </h1>
+
+<div id="player">
+    <h2>Player's Card:</h2>
+    <img id="playerCard" src="" alt="Player's Card">
+</div>
+
+<div id="computer">
+    <h2>Computer's Card:</h2>
+    <img id="computerCard" src="" alt="Computer's Card">
+</div>
+
+<div id="result">
+    <h2>Result:</h2>
+    <p id="resultText"></p>
+</div>
+
+<script>
+    function drawCard() {
+        return Math.floor(Math.random() * 3);
+    }
+
+    function getImageSource(card) {
+        switch (card) {
+            case 0:
+                return "stone.jpg";
+            case 1:
+                return "paper.jpg";
+            case 2:
+                return "scissors.jpg";
+        }
+    }
+    function playGame() {
+        const playerCard = parseInt(prompt("What's your number?(chosse a number from 0 to 2 ) "))
+        const computerCard = drawCard();
+
+        document.getElementById("playerCard").src = getImageSource(playerCard);
+        document.getElementById("computerCard").src = getImageSource(computerCard);
+
+        const resultTextElement = document.getElementById("resultText");
+
+        if (playerCard === computerCard) {
+            resultTextElement.textContent = "It's a draw!";
+        } else if (
+            (playerCard === 0 && computerCard === 2) ||
+            (playerCard === 1 && computerCard === 0) ||
+            (playerCard === 2 && computerCard === 1)
+        ) {
+            resultTextElement.textContent = "You win!";
+        } else {
+            resultTextElement.textContent = "Computer wins!";
+        }
+    }
+
+   
+
+    playGame();
+</script>
+
 </body>
 </html>

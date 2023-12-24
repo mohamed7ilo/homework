@@ -31,25 +31,17 @@ for (let i = 0; i < grades.length; i++) {
 
 let average = sum / grades.length;
 
-let aboveAverage = 0;
-let belowAverage = 0;
+let aboveAverage = [];
+let belowAverage = [];
 
 for (let i = 0; i < grades.length; i++) {
     if (grades[i] > average) {
-        aboveAverage++;
+        aboveAverage.push(Number(grades[i]))
     } else if (grades[i] < average) {
-        belowAverage++;
+        belowAverage.push(Number(grades[i]))
     }
 }
-document.write("all grades sum " + sum + "<br>");
-document.write("The average is " + average + "<br>");
-document.write("grades above the average: " + aboveAverage + "<br>");
-document.write("grades below the average: " + belowAverage + "<br>");
 
-console.log("all grades sum " + sum);
-console.log("  The avrage is  " + average); 
-console.log("grades above the avrage: " + aboveAverage);
-console.log("grades below the avrage: " + belowAverage);
 
 document.write("all grades sum " + sum + "<br>");
 document.write("The average is " + average + "<br>");
